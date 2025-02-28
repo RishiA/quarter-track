@@ -39,7 +39,7 @@ const Index = () => {
           <h1 className="quarter-heading">
             <span className="highlight-text">{quarterInfo.currentWeek} weeks</span> into{" "}
             <span className="highlight-text">
-              {quarterInfo.currentQuarter}, {quarterInfo.currentYear}
+              {quarterInfo.currentQuarter}, {quarterInfo.fiscalYear}
             </span>{" "}
             <span className="text-gray-400 text-lg md:text-xl lg:text-2xl font-normal">
               (week {quarterInfo.currentWeek} of {quarterInfo.totalWeeks})
@@ -102,9 +102,10 @@ const Index = () => {
           />
           
           <StatCard
-            label="Days To Go"
-            value={`${quarterInfo.percentRemaining}%`}
+            label="Fiscal Year"
+            value={quarterInfo.fiscalYear}
             delay={6}
+            highlight
           />
         </div>
 

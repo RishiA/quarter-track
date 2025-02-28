@@ -13,24 +13,37 @@ export interface QuarterInfo {
   percentComplete: number;
   percentRemaining: number;
   timestamp: string;
+  fiscalYear: string;
 }
 
 export function getCurrentQuarterInfo(): QuarterInfo {
   const today = startOfDay(new Date());
-  const currentYear = getYear(today);
+  const currentMonth = getMonth(today);
+  const calendarYear = getYear(today);
   
-  // Define quarters
-  const q1Start = new Date(currentYear, 0, 1); // Jan 1
-  const q1End = new Date(currentYear, 2, 31); // Mar 31
+  // Determine fiscal year
+  // If we're in Jan-May, we're in the previous calendar year's fiscal year
+  // If we're in Jun-Dec, we're in the current calendar year's fiscal year
+  const fiscalYearStart = currentMonth < 5 ? calendarYear - 1 : calendarYear;
+  const fiscalYearEnd = fiscalYearStart + 1;
+  const fiscalYear = `FY${fiscalYearStart}-${fiscalYearEnd.toString().slice(2)}`;
   
-  const q2Start = new Date(currentYear, 3, 1); // Apr 1
-  const q2End = new Date(currentYear, 5, 30); // Jun 30
+  // Define quarters based on fiscal year (June to May)
+  const q1Start = new Date(fiscalYearStart, 5, 1); // Jun 1
+  const q1End = new Date(fiscalYearStart, 7, 31); // Aug 31
   
-  const q3Start = new Date(currentYear, 6, 1); // Jul 1
-  const q3End = new Date(currentYear, 8, 30); // Sep 30
+  const q2Start = new Date(fiscalYearStart, 8, 1); // Sep 1
+  const q2End = new Date(fiscalYearStart, 10, 30); // Nov 30
   
-  const q4Start = new Date(currentYear, 9, 1); // Oct 1
-  const q4End = new Date(currentYear, 11, 31); // Dec 31
+  const q3Start = new Date(fiscalYearStart, 11, 1); // Dec 1
+  const q3End = new Date(fiscalYearEnd, 1, 28); // Feb 28/29
+  // Adjust for leap years - simplified approach
+  if (fiscalYearEnd % 4 === 0 && (fiscalYearEnd % 100 !== 0 || fiscalYearEnd % 400 === 0)) {
+    q3End.setDate(29);
+  }
+  
+  const q4Start = new Date(fiscalYearEnd, 2, 1); // Mar 1
+  const q4End = new Date(fiscalYearEnd, 4, 31); // May 31
   
   // Determine current quarter
   let currentQuarter = "Q1";
@@ -74,7 +87,7 @@ export function getCurrentQuarterInfo(): QuarterInfo {
   
   return {
     currentQuarter,
-    currentYear,
+    currentYear: calendarYear,
     currentDate: today,
     startDate,
     endDate,
@@ -83,6 +96,7 @@ export function getCurrentQuarterInfo(): QuarterInfo {
     daysRemaining,
     percentComplete,
     percentRemaining,
-    timestamp
+    timestamp,
+    fiscalYear
   };
 }
