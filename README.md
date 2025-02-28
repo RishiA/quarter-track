@@ -14,7 +14,6 @@ This application provides at-a-glance information about the current fiscal quart
 - Completion percentage
 - And more!
 
-![Fiscal Quarter Tracker](public/og-image.png)
 
 ## Features
 
@@ -31,55 +30,6 @@ This application uses a fiscal year that runs from June to May:
 - **Q2**: September 1 - November 30
 - **Q3**: December 1 - February 28/29
 - **Q4**: March 1 - May 31
-
-## Technologies
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- Tailwind CSS
-- shadcn/ui component library
-- date-fns for date calculations
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or newer)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd fiscal-quarter-tracker
-   ```
-
-3. Install dependencies:
-   ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-
-5. Open your browser and visit:
-   ```
-   http://localhost:5173
-   ```
-
-## Deployment
-
-This project can be deployed to any static site hosting service like Netlify, Vercel, or GitHub Pages.
 
 ## License
 
