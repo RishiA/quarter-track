@@ -1,69 +1,86 @@
-# Welcome to your Lovable project
 
-## Project info
+# Fiscal Quarter Tracker
 
-**URL**: https://lovable.dev/projects/49fb6e6c-a5e8-4cfd-915c-970f1052d83a
+A simple, intuitive web application that tracks and displays information about the current fiscal quarter.
 
-## How can I edit this code?
+## Overview
 
-There are several ways of editing your application.
+This application provides at-a-glance information about the current fiscal quarter, including:
 
-**Use Lovable**
+- Current quarter and fiscal year (FY format)
+- Start and end dates of the current quarter
+- Number of weeks into the quarter
+- Days remaining in the quarter
+- Completion percentage
+- And more!
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/49fb6e6c-a5e8-4cfd-915c-970f1052d83a) and start prompting.
+![Fiscal Quarter Tracker](public/og-image.png)
 
-Changes made via Lovable will be committed automatically to this repo.
+## Features
 
-**Use your preferred IDE**
+- **Real-time tracking**: Automatically calculates where you are in the current fiscal quarter
+- **Fiscal year support**: Based on a June-May fiscal year calendar
+- **Visual progress indicators**: Easy-to-read progress bars show completion percentage
+- **Responsive design**: Works on desktop and mobile devices
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Fiscal Year Definition
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This application uses a fiscal year that runs from June to May:
 
-Follow these steps:
+- **Q1**: June 1 - August 31
+- **Q2**: September 1 - November 30
+- **Q3**: December 1 - February 28/29
+- **Q4**: March 1 - May 31
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Technologies
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
 - React
-- shadcn-ui
 - Tailwind CSS
+- shadcn/ui component library
+- date-fns for date calculations
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/49fb6e6c-a5e8-4cfd-915c-970f1052d83a) and click on Share -> Publish.
+### Prerequisites
 
-## I want to use a custom domain - is that possible?
+- Node.js (v16 or newer)
+- npm or yarn
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd fiscal-quarter-tracker
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and visit:
+   ```
+   http://localhost:5173
+   ```
+
+## Deployment
+
+This project can be deployed to any static site hosting service like Netlify, Vercel, or GitHub Pages.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
