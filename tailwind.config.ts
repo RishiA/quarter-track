@@ -66,7 +66,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))"
         },
-        highlight: "#FF2D55",
+        highlight: "#0275de",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -109,7 +109,7 @@ export default {
       },
       boxShadow: {
         glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
-        highlight: "0 0 15px rgba(255, 45, 85, 0.5)",
+        highlight: "0 0 15px rgba(2, 117, 222, 0.5)",
       }
     },
   },

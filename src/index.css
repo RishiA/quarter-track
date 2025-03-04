@@ -111,7 +111,7 @@
   }
   
   .progress-fill {
-    @apply h-full bg-gradient-to-r from-highlight to-pink-500 rounded-full transition-all duration-500 ease-out;
+    @apply h-full bg-gradient-to-r from-highlight to-blue-300 rounded-full transition-all duration-500 ease-out;
   }
   
   .subtle-text {
