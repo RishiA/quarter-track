@@ -100,3 +100,10 @@ export function getCurrentQuarterInfo(): QuarterInfo {
     fiscalYear
   };
 }
+
+/**
+ * Simple helper to pluralize words based on count.
+ */
+export function pluralize(count, singular, plural) {
+  return count === 1 ? singular : plural;
+}
