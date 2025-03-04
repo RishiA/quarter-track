@@ -116,7 +116,7 @@ const Index = () => {
         {/* Footer */}
         <footer className="text-center opacity-0 animate-fade-in" style={{ animationDelay: "1s" }}>
           <p className="subtle-text">
-            Last updated: {quarterInfo.timestamp}
+            Fin.
           </p>
         </footer>
       </div>
