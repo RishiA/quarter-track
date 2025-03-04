@@ -1,9 +1,10 @@
 
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
-import { getCurrentQuarterInfo, type QuarterInfo } from "@/utils/quarterUtils";
+import { getCurrentQuarterInfo, type QuarterInfo, pluralize } from "@/utils/quarterUtils";
 import StatCard from "@/components/StatCard";
 import ProgressBar from "@/components/ProgressBar";
+
 
 const Index = () => {
   const [quarterInfo, setQuarterInfo] = useState<QuarterInfo | null>(null);
@@ -37,7 +38,10 @@ const Index = () => {
         {/* Header */}
         <header className="text-center space-y-4">
           <h1 className="quarter-heading">
-            <span className="highlight-text">{quarterInfo.currentWeek} weeks</span> into{" "}
+            <span className="highlight-text">
+              {quarterInfo.currentWeek} {pluralize(quarterInfo.currentWeek, "week", "weeks")}
+            </span>{" "}
+            into{" "}
             <span className="highlight-text">
               {quarterInfo.currentQuarter}, {quarterInfo.fiscalYear}
             </span>{" "}
@@ -72,7 +76,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <StatCard
             label="Weeks Completed"
-            value={`${quarterInfo.currentWeek} of ${quarterInfo.totalWeeks}`}
+            value={`${quarterInfo.currentWeek} ${pluralize(quarterInfo.currentWeek, "week", "weeks")} of ${quarterInfo.totalWeeks}`}
             delay={1}
             highlight
           />
