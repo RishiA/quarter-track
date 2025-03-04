@@ -44,7 +44,7 @@ const Index = () => {
             into{" "}
             <span className="highlight-text">
               {quarterInfo.currentQuarter}, {quarterInfo.fiscalYear}
-            </span>{" "}
+            </span>{" "} <br></br>
             <span className="text-gray-400 text-lg md:text-xl lg:text-2xl font-normal">
               (week {quarterInfo.currentWeek} of {quarterInfo.totalWeeks})
             </span>
