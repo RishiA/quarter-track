@@ -3,7 +3,7 @@
 
 A simple, intuitive web application that tracks and displays information about the current fiscal quarter.
 
-## Dem
+## Demo
 https://vercel.com/rishias-projects/quarter-track 
 
 ## Overview
