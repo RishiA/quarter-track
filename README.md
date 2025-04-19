@@ -4,7 +4,7 @@
 A simple, intuitive web application that tracks and displays information about the current fiscal quarter.
 
 ## Demo
-https://vercel.com/rishias-projects/quarter-track 
+[https://vercel.com/rishias-projects/quarter-track ](https://quarter-track.vercel.app/)
 
 ## Overview
 
